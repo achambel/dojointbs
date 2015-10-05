@@ -33,10 +33,7 @@ Ao final do evento, todos devem opinar:
 Contribua com desafios
 ------------------------
 1. Faça um fork do projeto em https://github.com/achambel/dojointbs
-2. Crie um branch ``` $ git checkout -b your-branch ```
-3. Comite suas alterações ``` $ git commit -am 'Desafio foo' ```
-4. Push do branch ``` $ git push origin your-branch ```
-5. Crie um Pull Request
+2. Faça um Pull Request.
 
 Pede-se
 -------
