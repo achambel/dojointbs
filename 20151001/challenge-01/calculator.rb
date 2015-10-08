@@ -3,6 +3,11 @@ class Calculator
 			raise ArgumentError if !(numeric?(n1) || numeric?(n2)) 
 			Float(n1) + Float(n2)
 	end
+
+	def sub(n1, n2)
+		raise ArgumentError if !(numeric?(n1) || numeric?(n2)) 
+			Float(n1) - Float(n2)
+	end
 	
 private
 	def numeric?(number)

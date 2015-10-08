@@ -28,6 +28,28 @@ class TestCalculator < Minitest::Test
 		assert_equal(7.5, @calculator.add(3.75, 3.75), "3.75+3.75=7.5")
 	end
 
+	def test_sub
+		assert_equal(4, @calculator.sub(8, 4), "8-4=4")
+	end
+
+	def test_sub_with_one_string
+		assert_equal(4, @calculator.sub("8", 4), "'8'-4=4")
+	end
+
+	def test_sub_two_string
+		assert_equal(4, @calculator.sub("8", "4"), "'8'-'4'=4")
+	end
+
+	def test_sub_with_letters
+		assert_raises ArgumentError do
+			@calculator.sub("a", "b")
+		end
+	end
+
+	def test_sub_with_float
+		assert_equal(3.75, @calculator.sub(7.5, 3.75), "7.5-3.75=3.75")
+	end
+
 
 	#def test_has_add
 	#	assert_respond_to(@calculator, :add, "should have the add method")
