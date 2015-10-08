@@ -50,6 +50,27 @@ class TestCalculator < Minitest::Test
 		assert_equal(3.75, @calculator.sub(7.5, 3.75), "7.5-3.75=3.75")
 	end
 
+		def test_mul
+		assert_equal(20, @calculator.mul(5, 4), "5x4=20")
+	end
+
+	def test_mul_with_one_string
+		assert_equal(30, @calculator.mul("6", 5), "'6'x5=30")
+	end
+
+	def test_mul_two_string
+		assert_equal(64, @calculator.mul("8", "8"), "'8'x'8'=64")
+	end
+
+	def test_mul_with_letters
+		assert_raises ArgumentError do
+			@calculator.mul("%$$", "&*&")
+		end
+	end
+
+	def test_mul_with_float
+		assert_equal(7.5625, @calculator.mul(2.75, 2.75), "2.75x2.75=7.5625")
+	end
 
 	#def test_has_add
 	#	assert_respond_to(@calculator, :add, "should have the add method")

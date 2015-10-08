@@ -8,6 +8,11 @@ class Calculator
 		raise ArgumentError if not_a_number?(n1, n2)
 			Float(n1) - Float(n2)
 	end
+
+	def mul(n1, n2)
+		raise ArgumentError if not_a_number?(n1, n2)
+		Float(n1) * Float(n2)
+	end
 	
 private
 	def not_a_number?(n1, n2)
