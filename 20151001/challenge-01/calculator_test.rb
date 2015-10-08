@@ -19,9 +19,13 @@ class TestCalculator < Minitest::Test
 	end
 
 	def test_add_with_letters
-		assert_raises TypeError do
+		assert_raises ArgumentError do
 			@calculator.add("a", "b")
 		end
+	end
+
+	def test_add_with_float
+		assert_equal(7.5, @calculator.add(3.75, 3.75), "3.75+3.75=7.5")
 	end
 
 
