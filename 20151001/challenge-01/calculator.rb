@@ -1,17 +1,8 @@
 class Calculator
-	def add(n1, n2)
+
+	def calc(op, n1, n2)
 			raise ArgumentError if not_a_number?(n1, n2)
-			Float(n1) + Float(n2)
-	end
-
-	def sub(n1, n2)
-		raise ArgumentError if not_a_number?(n1, n2)
-			Float(n1) - Float(n2)
-	end
-
-	def mul(n1, n2)
-		raise ArgumentError if not_a_number?(n1, n2)
-		Float(n1) * Float(n2)
+			Float(n1).send(op, Float(n2))
 	end
 	
 private
