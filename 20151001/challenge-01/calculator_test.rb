@@ -110,4 +110,12 @@ class TestCalculator < Minitest::Test
 		end
 	end
 
+	def test_add_percent
+		assert_equal(110.00, @calculator.add_percent(100.00, 10), "100.00 + 10% = 110.00")
+	end
+
+	def test_sub_percent
+		assert_equal(100.00, @calculator.sub_percent(110.00, 10), "110.00 - 10% = 100.00")
+	end
+
 end

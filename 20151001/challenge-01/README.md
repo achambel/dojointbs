@@ -7,11 +7,10 @@ Criar uma calculadora com as funcionalidades:
 2. Subtração
 3. Multiplicação
 4. Divisão
-5. Desconto
-6. Acréscimo
+5. Acréscimo
+6. Desconto
 
 Regras
 ---
 Cada funcionalidade deve ser capaz de calcular:
 - dado dois números
-- refactoring: dado n números
